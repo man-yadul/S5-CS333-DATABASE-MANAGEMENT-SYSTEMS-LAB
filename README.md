@@ -1,7 +1,7 @@
 # Rajagiri School of Engineering and Technology, Kakkanad 
 ## Department of Computer Science and Engineering
 
-### CS333: Application Software Development Lab–2021
+### CSL333: Database Management Systems Lab
 ### S5 CSE (KTU) 
 
 #### Day 1 
