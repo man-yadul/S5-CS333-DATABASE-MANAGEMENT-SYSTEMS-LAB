@@ -1,18 +1,3 @@
-b.  CREATE TABLE Department (
-    DeptNo Varchar2(6) NOT NULL PRIMARY KEY,
-    DeptName Varchar(8),
-    Location Varchar(10)
-    );
-
-    INSERT INTO Department 
-    VALUES ('D001', 'DeptA', 'A block');
-    INSERT INTO Department 
-    VALUES ('D002', 'DeptB', 'B block');
-    INSERT INTO Department 
-    VALUES ('D003', 'DeptC', 'C block');
-    INSERT INTO Department 
-    VALUES ('D004', 'DeptD', 'D block');
-
 a.  CREATE TABLE Employee (
     EmpId Varchar2(5) NOT NULL PRIMARY KEY,
     EmpName Varchar(20),
@@ -22,7 +7,6 @@ a.  CREATE TABLE Employee (
     HireDate date,
     Salary Number(10,3),
     Comm int,
-    FOREIGN KEY (DeptNo) REFERENCES Department(DeptNo)
     );
 
     INSERT INTO Employee 
@@ -37,6 +21,21 @@ a.  CREATE TABLE Employee (
     VALUES ('E0005', 'Bony', 'Manager', NULL, 'D001', TO_DATE('11/04/2011', 'DD/MM/YYYY'), 50000, 1000);
     INSERT INTO Employee 
     VALUES ('E0006', 'Manu', 'Supplier', 'E0001', 'D003', TO_DATE('19/06/2013', 'DD/MM/YYYY'), 5000, 450);
+
+b.  CREATE TABLE Department (
+    DeptNo Varchar2(6) NOT NULL PRIMARY KEY,
+    DeptName Varchar(8),
+    Location Varchar(10)
+    );
+
+    INSERT INTO Department 
+    VALUES ('D001', 'DeptA', 'A block');
+    INSERT INTO Department 
+    VALUES ('D002', 'DeptB', 'B block');
+    INSERT INTO Department 
+    VALUES ('D003', 'DeptC', 'C block');
+    INSERT INTO Department 
+    VALUES ('D004', 'DeptD', 'D block');
 
 c.  CREATE TABLE Client (
     Cno Varchar2(6),
