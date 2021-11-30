@@ -1,9 +1,9 @@
 a.  CREATE TABLE Employee (
     EmpId Varchar2(5) NOT NULL PRIMARY KEY,
-    EmpName Varchar(20),
-    Job Varchar(20),
-    Manager Varchar(7),
-    DeptNo Varchar(6),
+    EmpName Varchar2(20),
+    Job Varchar2(20),
+    Manager Varchar2(7),
+    DeptNo Varchar2(6),
     HireDate date,
     Salary Number(10,3),
     Comm int,
