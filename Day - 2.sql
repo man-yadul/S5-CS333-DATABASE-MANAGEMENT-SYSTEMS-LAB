@@ -98,7 +98,7 @@ n.  UPDATE Employee
     SET Comm = 600
     WHERE EmpName = 'Abey';
 
-o.  SELECT Name ||' from '|| City ||' has '|| Baldue ||' balance due.'
+o.  SELECT Name || ' from ' || City || ' has ' || Baldue || ' balance due.'
     FROM Client;
 
 p.  SELECT Baldue AS "Due Balance"
