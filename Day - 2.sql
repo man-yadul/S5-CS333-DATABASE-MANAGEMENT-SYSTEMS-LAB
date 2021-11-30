@@ -101,8 +101,6 @@ n.  UPDATE Employee
 o.  SELECT Name ||' from '|| City ||' has '|| Baldue ||' balance due.'
     FROM Client;
 
-
-
 p.  SELECT Baldue AS "Due Balance"
     FROM Client;
 
