@@ -84,7 +84,7 @@ j.  SELECT DISTINCT City
     FROM Client;
 
 k.  SELECT * 
-    FROM EMPLOYEE
+    FROM Employee
     WHERE HireDate > '31-Dec-2012' AND Salary > 17500;
 
 l.  SELECT * 
