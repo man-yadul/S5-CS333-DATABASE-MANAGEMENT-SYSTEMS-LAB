@@ -24,8 +24,8 @@ a.  CREATE TABLE Employee (
 
 b.  CREATE TABLE Department (
     DeptNo Varchar2(6) NOT NULL PRIMARY KEY,
-    DeptName Varchar(8),
-    Location Varchar(10)
+    DeptName Varchar2(8),
+    Location Varchar2(10)
     );
 
     INSERT INTO Department 
@@ -100,8 +100,8 @@ n.  UPDATE Employee
 
 o.  SELECT Name ||' from '|| City ||' has '|| Baldue ||' balance due.'
     FROM Client;
-    SELECT Name, ' from ', City, ' has ', Baldue,' balance due.'
-    FROM Client;
+
+
 
 p.  SELECT Baldue AS "Due Balance"
     FROM Client;
