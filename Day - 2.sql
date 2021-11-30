@@ -6,7 +6,7 @@ a.  CREATE TABLE Employee (
     DeptNo Varchar2(6),
     HireDate date,
     Salary Number(10,3),
-    Comm INT,
+    Comm INT
     );
 
     INSERT INTO Employee 
