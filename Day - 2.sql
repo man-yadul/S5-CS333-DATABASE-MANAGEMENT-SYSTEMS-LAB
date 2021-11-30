@@ -87,7 +87,8 @@ k.  SELECT *
     FROM EMPLOYEE
     WHERE HireDate > '31-Dec-2012' AND Salary > 17500;
 
-l.  SELECT * FROM Employee
+l.  SELECT * 
+    FROM Employee
     WHERE EmpName BETWEEN 'E' AND 'L';
 
 m.  UPDATE Client
