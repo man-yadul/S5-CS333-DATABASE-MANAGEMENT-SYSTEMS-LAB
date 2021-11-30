@@ -78,14 +78,14 @@ h.  SELECT EmpName, HireDate, Salary
 
 i.  SELECT * 
     FROM Employee
-    WHERE EmpName LIKE 'A%' OR EmpName LIKE 'K%'
+    WHERE EmpName LIKE 'A%' OR EmpName LIKE 'K%';
 
 j.  SELECT DISTINCT City 
     FROM Client;
 
 k.  SELECT * 
     FROM EMPLOYEE
-    WHERE HireDate > '31-Dec-2012' AND Salary > 17500
+    WHERE HireDate > '31-Dec-2012' AND Salary > 17500;
 
 l.  SELECT * FROM Employee
     WHERE EmpName BETWEEN 'E' AND 'L';
