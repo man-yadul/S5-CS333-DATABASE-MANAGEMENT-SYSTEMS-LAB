@@ -1,8 +1,11 @@
 3a.
+ALTER TABLE Client
+ADD PRIMARY KEY (CNO);
+
+3b.
 ALTER TABLE Employee
 ADD FOREIGN KEY (Manager) REFERENCES Employee(EmpID);
 
-3b.
 ALTER TABLE Employee
 ADD FOREIGN KEY (DeptNo) REFERENCES Department(DeptNo);
 
