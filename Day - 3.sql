@@ -1,6 +1,6 @@
 3a.
 ALTER TABLE Client
-ADD PRIMARY KEY (CNO);
+ADD PRIMARY KEY (Cno);
 
 3b.
 ALTER TABLE Employee
