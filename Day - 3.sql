@@ -10,8 +10,11 @@ ALTER TABLE Employee
 ADD FOREIGN KEY (DeptNo) REFERENCES Department(DeptNo);
 
 3c.
+INSERT INTO Department
+VALUES ('D006', 'DeptF', 'F block');
+
 INSERT INTO Employee (EmpID, DeptNo)
-VALUES (E0008, D006);
+VALUES ('E0008', 'D006');
 
 4a.
 ALTER TABLE Employee
@@ -32,4 +35,4 @@ DROP UNIQUE (Job);
 4e.
 SELECT * 
 FROM USER_CONSTRAINTS
-WHERE table_name = 'Employee';
+WHERE table_name = 'EMPLOYEE';
