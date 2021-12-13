@@ -26,8 +26,8 @@ Manager
 */
 
 7a.
-CREATE VIEW CUST_VW
-AS SELECT EmpId, EmpName, Job, Manager
+CREATE VIEW CUST_VW AS 
+SELECT EmpId, EmpName, Job, Manager
 FROM Employee;
 
 /*
