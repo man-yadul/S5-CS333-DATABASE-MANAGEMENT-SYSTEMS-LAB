@@ -115,7 +115,7 @@ e.  SELECT *
     FROM Client;
 
 f.  INSERT INTO Employee (Empid) 
-    VALUES ('E0001');
+    VALUES ('E0007');
 
 g.  SELECT * 
     FROM Client
