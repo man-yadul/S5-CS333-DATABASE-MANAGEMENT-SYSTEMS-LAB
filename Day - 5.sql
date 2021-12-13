@@ -3,6 +3,22 @@ CREATE VIEW CUST_VW
 AS SELECT EmpId, EmpName, Job, Manager
 FROM Employee;
 
+/*
+If query doesn't work, try:
+SQL> connect
+Enter user-name: sys as sysdba
+Enter password: *****
+Connected.
+SQL> grant all privileges to u1903216;
+
+Grant succeeded.
+
+SQL> connect
+Enter user-name: u1903216
+Enter password: ********
+Connected.
+*/
+
 7b.
 UPDATE CUST_VW
 SET Job = 'Senior Clerk' 
