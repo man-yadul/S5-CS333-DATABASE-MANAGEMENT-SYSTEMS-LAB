@@ -22,7 +22,7 @@ FOREIGN KEY (Manager) REFERENCES Employee(EmpID);
 
 ALTER TABLE Employee
 ADD CONSTRAINT FK_DEPT
-ADD FOREIGN KEY (DeptNo) REFERENCES Department(DeptNo);
+FOREIGN KEY (DeptNo) REFERENCES Department(DeptNo);
 
 3c.
 INSERT INTO Department
