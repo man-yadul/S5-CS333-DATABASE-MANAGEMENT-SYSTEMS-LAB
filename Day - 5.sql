@@ -1,10 +1,10 @@
-7a. 
-CREATE VIEW CUST_VW 
-AS SELECT EmpId, EmpName, Job, Manager 
+7a.
+CREATE VIEW CUST_VW
+AS SELECT EmpId, EmpName, Job, Manager
 FROM Employee;
 
 7b.
-UPDATE CUST_VW 
+UPDATE CUST_VW
 SET Job = 'Senior Clerk' 
 WHERE Job = 'Clerk';
 
@@ -15,35 +15,35 @@ WHERE EmpName = 'Kevin';
 7d.
 DROP VIEW CUST_VW;
 
-8a. 
+8a.
 SELECT POWER(16, 5)
 FROM DUAL;
 
-8b. 
+8b.
 SELECT LENGTH('Application');
 
-8c. 
+8c.
 SELECT LAST_DAY(SYSDATE)
 FROM DUAL;
 
-8d. 
+8d.
 SELECT TO_CHAR(65432,'$99999') 
 FROM DUAL;
 
-8e. 
+8e.
 SELECT SYSTIMESTAMP 
 FROM DUAL;
 
-8f. 
+8f.
 SELECT TO_CHAR(HireDate, 'YYYY') HireDate 
 FROM Employee;
 
-8g. 
+8g.
 SELECT TRUNC(MONTHS_BETWEEN(SYSDATE, TO_DATE(HireDate))) 
 AS HireDate 
 FROM Employee;
 
-8h. 
+8h.
 SELECT COUNT(DISTINCT(DeptName)) 
 FROM Dept;
 
@@ -51,18 +51,18 @@ FROM Dept;
 SELECT TO_CHAR(HireDate, 'DY, DDth MONTH, YYYY') 
 FROM Employee;
 
-9a. 
+9a.
 SELECT SUM(Baldue)
 FROM Client;
 
-9b. 
+9b.
 SELECT COUNT(*) 
 FROM Employee;
 
-9c. 
+9c.
 SELECT MIN(Baldue), MAX(Baldue) 
 FROM Client;
 
-9d. 
+9d.
 SELECT AVG(Salary) 
 FROM Employee;
