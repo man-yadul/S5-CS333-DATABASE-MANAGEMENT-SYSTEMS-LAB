@@ -3,12 +3,12 @@ CREATE VIEW CUST_VW
 AS SELECT EmpId, EmpName, Job, Manager 
 FROM Employee;
 
-7b. 
+7b.
 UPDATE CUST_VW 
 SET Job = 'Senior Clerk' 
 WHERE Job = 'Clerk';
 
-7c. 
+7c.
 DELETE FROM CUST_VW
 WHERE EmpName = 'Kevin';
 
