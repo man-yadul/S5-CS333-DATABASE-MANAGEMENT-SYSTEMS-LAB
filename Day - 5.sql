@@ -9,6 +9,9 @@ SET Job = 'Senior Clerk'
 WHERE Job = 'Clerk';
 
 7c.
+ALTER TABLE EMPLOYEEE
+DROP CONSTRAINT FK_EMP;
+
 DELETE FROM CUST_VW
 WHERE EmpName = 'Kevin';
 
@@ -20,7 +23,8 @@ SELECT POWER(16, 5)
 FROM DUAL;
 
 8b.
-SELECT LENGTH('Application');
+SELECT LENGTH('Application')
+FROM DUAL;
 
 8c.
 SELECT LAST_DAY(SYSDATE)
@@ -45,7 +49,7 @@ FROM Employee;
 
 8h.
 SELECT COUNT(DISTINCT(DeptName)) 
-FROM Dept;
+FROM Department;
 
 8i.
 SELECT TO_CHAR(HireDate, 'DY, DDth MONTH, YYYY') 
