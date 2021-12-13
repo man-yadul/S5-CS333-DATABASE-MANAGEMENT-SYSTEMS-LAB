@@ -47,7 +47,7 @@ FROM Employee;
 SELECT COUNT(DISTINCT(DeptName)) 
 FROM Dept;
 
-8i. 
+8i.
 SELECT TO_CHAR(HireDate, 'DY, DDth MONTH, YYYY') 
 FROM Employee;
 
