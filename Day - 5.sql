@@ -25,7 +25,8 @@ Manager
 9d. Find the average salary in Employee table. 
 */
 
-7a.
+7.
+a.
 CREATE VIEW CUST_VW AS 
 SELECT EmpId, EmpName, Job, Manager
 FROM Employee;
@@ -46,70 +47,72 @@ Enter password: ********
 Connected.
 */
 
-7b.
+b.
 UPDATE CUST_VW
 SET Job = 'Senior Clerk' 
 WHERE Job = 'Clerk';
 
-7c.
+c.
 ALTER TABLE Employee
 DROP CONSTRAINT FK_EMP;
 
 DELETE FROM CUST_VW
 WHERE EmpName = 'Kevin';
 
-7d.
+d.
 DROP VIEW CUST_VW;
 
-8a.
+8.
+a.
 SELECT POWER(16, 5)
 FROM DUAL;
 
-8b.
+b.
 SELECT LENGTH('Application')
 FROM DUAL;
 
-8c.
+c.
 SELECT LAST_DAY(SYSDATE)
 FROM DUAL;
 
-8d.
+d.
 SELECT TO_CHAR(65432,'$99999') 
 FROM DUAL;
 
-8e.
+e.
 SELECT SYSTIMESTAMP 
 FROM DUAL;
 
-8f.
+f.
 SELECT TO_CHAR(HireDate, 'YYYY') HireDate 
 FROM Employee;
 
-8g.
+g.
 SELECT TRUNC(MONTHS_BETWEEN(SYSDATE, TO_DATE(HireDate))) 
 AS HireDate 
 FROM Employee;
 
-8h.
+h.
 SELECT COUNT(DISTINCT(DeptName)) 
 FROM Department;
 
-8i.
+i.
 SELECT TO_CHAR(HireDate, 'DY, DDth MONTH, YYYY') 
 FROM Employee;
 
-9a.
+9.
+a.
 SELECT SUM(Baldue)
 FROM Client;
 
-9b.
+b.
 SELECT COUNT(*) 
 FROM Employee;
 
-9c.
+c.
 SELECT MIN(Baldue), MAX(Baldue) 
 FROM Client;
 
-9d.
+d.
 SELECT AVG(Salary) 
 FROM Employee;
