@@ -1,5 +1,5 @@
 /*
-7. Creation of Views * <br/>
+7. Creation of Views
 7a. Create a view CUST_VW of the Employee table with the following columns: 
 EmpId 
 EmpName 
@@ -8,7 +8,7 @@ Manager
 7b. Update CUST_VW by changing the Job=’Clerk’ to ‘Senior Clerk’ 
 7c. Delete from CUST_VW the Employee-Kevin. 
 7d. Delete the view created. 
-8. Implementation of Built in functions in RDBMS * 
+8. Implementation of Built in functions in RDBMS 
 8a. Find the value of 165 
 8b. Find the length of the string “Application” 
 8c. What is the last date of the current month? 
@@ -18,7 +18,7 @@ Manager
 8g. Calculate the number of months the employees have been working in the Company.
 8h. Find the number of departments available. 
 8i. Display the hire date of all employees in the following format:Friday, 11th August, 2017 
-9. Implementation of various aggregate functions in SQL * 
+9. Implementation of various aggregate functions in SQL 
 9a. Calculate the total of Baldue from Client table.
 9b. Count the total records in Employee table. 
 9c. Find the minimum and maximum Balance due from Client table. 
