@@ -88,7 +88,7 @@ LEFT JOIN Department ON Employee.DeptNo = Department.DeptNo;
 11h.
 SELECT EmpName, Job, Manager
 FROM Employee
-RIGHT JOIN Department ON  Employee.DeptNo = Department.DeptNo;
+RIGHT JOIN Department ON Employee.DeptNo = Department.DeptNo;
 
 11i.
 SELECT EmpName, Job, Manager
