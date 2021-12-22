@@ -81,16 +81,16 @@ JOIN Department ON Employee.DeptNo = Department.DeptNo
 WHERE Salary > 20000;
 
 11g.
-SELECT EmpName, Job, Manager
-FROM Employee
-LEFT JOIN Department ON Employee.DeptNo = Department.DeptNo;
+SELECT E.EmpName, E.Job, M.EmpName AS ManagerName
+FROM Employee E
+LEFT OUTER JOIN Employee M ON E.Manager = M.EmpId;
 
 11h.
-SELECT EmpName, Job, Manager
-FROM Employee
-RIGHT JOIN Department ON Employee.DeptNo = Department.DeptNo;
+SELECT E.EmpName, E.Job, M.EmpName AS ManagerName
+FROM Employee E
+RIGHT OUTER JOIN Employee M ON E.Manager = M.EmpId;
 
 11i.
-SELECT EmpName, Job, Manager
-FROM Employee
-FULL OUTER JOIN Department ON Employee.DeptNo = Department.DeptNo;
+SELECT E.EmpName, E.Job, M.EmpName AS ManagerName
+FROM Employee E
+FULL OUTER JOIN Employee M ON E.Manager = M.EmpId;
