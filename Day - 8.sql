@@ -1,3 +1,11 @@
+/*
+13. Creation of Procedures and Functions
+a. Create a procedure which increases the Commission of the given employee of 
+the Employee table by 5%. 
+b. Create a function which returns the manager name of an employee, given the 
+EmpId. 
+*/
+
 13a.
 DECLARE
 	EMPLID EMPLOYEE.EMPID%TYPE;
