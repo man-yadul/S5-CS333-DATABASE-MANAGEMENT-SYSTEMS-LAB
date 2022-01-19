@@ -11,11 +11,11 @@
   4e. Display all the constraints on the Employee table.
 */
 
-3a.
+-- 3a.
 ALTER TABLE Client
 ADD PRIMARY KEY (Cno);
 
-3b.
+-- 3b.
 ALTER TABLE Employee
 ADD CONSTRAINT FK_EMP 
 FOREIGN KEY (Manager) REFERENCES Employee(EmpID);
@@ -24,30 +24,30 @@ ALTER TABLE Employee
 ADD CONSTRAINT FK_DEPT
 FOREIGN KEY (DeptNo) REFERENCES Department(DeptNo);
 
-3c.
+-- 3c.
 INSERT INTO Department
 VALUES ('D006', 'DeptF', 'F block');
 
 INSERT INTO Employee (EmpID, DeptNo)
 VALUES ('E0008', 'D006');
 
-4a.
+-- 4a.
 ALTER TABLE Employee
 ADD UNIQUE (Job);
 
-4b.
+-- 4b.
 ALTER TABLE Employee
 ADD CHECK (Comm > 400);
 
-4c.
+-- 4c.
 ALTER TABLE Employee
 MODIFY Salary DEFAULT 25000;
 
-4d.
+-- 4d.
 ALTER TABLE Employee
 DROP UNIQUE (Job);
 
-4e.
+-- 4e.
 SELECT * 
 FROM USER_CONSTRAINTS
 WHERE table_name = 'EMPLOYEE';
