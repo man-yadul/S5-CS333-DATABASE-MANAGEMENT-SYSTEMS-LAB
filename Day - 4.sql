@@ -9,23 +9,23 @@
   6d. Write a query to revoke some privileges of employees table from the user.
 */
 
-5a.
+-- 5a.
 SAVEPOINT A;
 
 DELETE FROM Client 
 WHERE Baldue <= 0;
 
-5b.
+-- 5b.
 ROLLBACK TO A;
 
-6a.
+-- 6a.
 GRANT ALL ON Client TO U1903215;
 
-6b.
+-- 6b.
 GRANT SELECT ON Employee TO U1903215;
 
-6c.
+-- 6c.
 REVOKE ALL ON Client FROM U1903215;
 
-6d.
+-- 6d.
 REVOKE SELECT ON Employee FROM U1903215;
