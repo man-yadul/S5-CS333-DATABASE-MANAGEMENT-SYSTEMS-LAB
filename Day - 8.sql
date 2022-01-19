@@ -6,7 +6,7 @@ b. Create a function which returns the manager name of an employee, given the
 EmpId. 
 */
 
-13a.
+-- 13a.
 DECLARE
 	EMPLID EMPLOYEE.EMPID%TYPE;
 	A EMPLOYEE.COMM%TYPE;
@@ -34,7 +34,7 @@ BEGIN
 	DBMS_OUTPUT.PUT_LINE('UPDATED COMMISSION OF EMPLOYEE WITH EMPID ' || EMPLID || ' AND COMMISSION IS : ' || B);
 END;
 
-13b.
+-- 13b.
 DECLARE
 	EMPLID EMPLOYEE.EMPID%TYPE;
 	MGR VARCHAR2(5);
