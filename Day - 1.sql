@@ -1,5 +1,5 @@
 /*
-Creation of a database using DDL commands and writes DQL queries to retrieve information from the database.
+1Creation of a database using DDL commands and writes DQL queries to retrieve information from the database.
 a. Create the following tables.
 i. Table Name: Hospital
 Column Name Data Type Constraint
@@ -26,44 +26,54 @@ i. Perform the following operations: 55-15+8*3/6
 j. Display all the tables currently available to the user.
 */
 
-a.  (i)     CREATE TABLE Hospital (
-            DoctorId Varchar2(10) PRIMARY KEY,
-            DocName Varchar2(20),
-            Specialization Varchar2(10),
-            HOD Varchar2(10),
-            DeptNo Varchar2(5),
-            HireDate Date,
-            Sal Number(10,3)
-            );
+-- 1a.(i)     
+CREATE TABLE Hospital (
+    DoctorId Varchar2(10) PRIMARY KEY,
+    DocName Varchar2(20),
+    Specialization Varchar2(10),
+    HOD Varchar2(10),
+    DeptNo Varchar2(5),
+    HireDate Date,
+    Sal Number(10,3)
+);
+-- 1a. (ii)    
+CREATE TABLE HospitalDept (
+    DeptNo Varchar2(5) PRIMARY KEY,
+    DeptName Varchar2(20),
+    Location Varchar2(20)
+);
 
-    (ii)    CREATE TABLE HospitalDept (
-            DeptNo Varchar2(5) PRIMARY KEY,
-            DeptName Varchar2(20),
-            Location Varchar2(20)
-            );
+-- 1b.
+ALTER TABLE Hospital 
+ADD AdditionalQualification Varchar2(20);
 
-b.  ALTER TABLE Hospital 
-    ADD AdditionalQualification Varchar2(20);
-
-c.  ALTER TABLE Hospital 
+-- 1c.  
+ALTER TABLE Hospital 
     MODIFY Specialization Varchar2(25);
 
-d.  ALTER TABLE HospitalDept 
-    DROP COLUMN Location;
+-- 1d.  
+ALTER TABLE HospitalDept 
+DROP COLUMN Location;
 
-e.  ALTER TABLE Hospital 
-    RENAME COLUMN Sal TO Salary;
+-- 1e.
+ALTER TABLE Hospital 
+RENAME COLUMN Sal TO Salary;
 
-f.  DROP TABLE HospitalDept;
+-- 1f. 
+DROP TABLE HospitalDept;
 
-g.  SELECT 'Yadul', '20' 
-    FROM Dual;
+-- 1g.
+SELECT 'Yadul', '20' 
+FROM Dual;
 
-h.  SELECT Sysdate AS System_date 
-    FROM Dual;
+-- 1h.
+SELECT Sysdate AS System_date 
+FROM Dual;
 
-i.  SELECT 55-15+8*3/6 
-    FROM Dual;
+-- 1i.  
+SELECT 55-15+8*3/6 
+FROM Dual;
 
-j.  SELECT table_name 
-    FROM user_tables;
+-- 1j.  
+SELECT table_name 
+FROM user_tables;
