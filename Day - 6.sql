@@ -15,23 +15,23 @@ Implementation of set operators, nested queries and Join queries *
 11i. Display the Employee name, Job, Manager Name by implementing a full outer join.
 */
 
-10a.
+-- 10a.
 SELECT Name
 FROM Client 
 ORDER BY Name;
 
-10b.
+-- 10b.
 SELECT DeptNo, MAX(Salary)
 FROM Employee
 GROUP BY DeptNo;
 
-10c.
+-- 10c.
 SELECT DeptNo, MIN(Salary)
 FROM Employee
 WHERE DeptNo != 'D001'
 GROUP BY DeptNo;
 
-11a.
+-- 11a.
 SELECT DeptNo
 FROM Employee
 UNION ALL
@@ -39,7 +39,7 @@ SELECT DeptNo
 FROM Department
 ORDER BY DeptNo;
 
-11b.
+-- 11b.
 SELECT DeptNo
 FROM Employee
 WHERE DeptNo NOT IN (
@@ -47,7 +47,7 @@ WHERE DeptNo NOT IN (
     FROM Department
 );
 
-11c.
+-- 11c.
 SELECT *
 FROM Employee
 WHERE Salary > (
@@ -56,7 +56,7 @@ WHERE Salary > (
     WHERE EmpName = 'Adarsh'
 );
 
-11d.
+-- 11d.
 SELECT *
 FROM Employee
 WHERE Salary < ANY (
@@ -65,7 +65,7 @@ WHERE Salary < ANY (
     WHERE DeptNo = 'D004'
 );
 
-11e.
+-- 11e.
 SELECT EmpName, Salary
 FROM Employee
 WHERE Salary > (
@@ -74,23 +74,23 @@ WHERE Salary > (
     WHERE Job LIKE 'A%'
 );
 
-11f.
+-- 11f.
 SELECT * 
 FROM Employee
 JOIN Department ON Employee.DeptNo = Department.DeptNo
 WHERE Salary > 20000;
 
-11g.
+-- 11g.
 SELECT E.EmpName, E.Job, M.EmpName AS ManagerName
 FROM Employee E
 LEFT OUTER JOIN Employee M ON E.Manager = M.EmpId;
 
-11h.
+-- 11h.
 SELECT E.EmpName, E.Job, M.EmpName AS ManagerName
 FROM Employee E
 RIGHT OUTER JOIN Employee M ON E.Manager = M.EmpId;
 
-11i.
+-- 11i.
 SELECT E.EmpName, E.Job, M.EmpName AS ManagerName
 FROM Employee E
 FULL OUTER JOIN Employee M ON E.Manager = M.EmpId;
