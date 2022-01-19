@@ -1,5 +1,5 @@
 /*
-1Creation of a database using DDL commands and writes DQL queries to retrieve information from the database.
+1. Creation of a database using DDL commands and writes DQL queries to retrieve information from the database.
 a. Create the following tables.
 i. Table Name: Hospital
 Column Name Data Type Constraint
