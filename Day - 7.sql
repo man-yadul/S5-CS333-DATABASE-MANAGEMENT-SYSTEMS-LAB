@@ -10,7 +10,7 @@ deduct Rs.100/ -from the balance. This process is fired on the ACCOUNT table.
 (Exception handling in PL/SQL) 
 */
 
-12a.
+-- 12a.
 CREATE TABLE AREAS
 (
 	R NUMBER(3), 
@@ -31,7 +31,7 @@ BEGIN
 	END LOOP;
 END;
 
-12b.
+-- 12b.
 CREATE TABLE ACCOUNT
 (
 	ACCNO VARCHAR2(20),
