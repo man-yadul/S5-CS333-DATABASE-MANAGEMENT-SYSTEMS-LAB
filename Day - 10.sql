@@ -1,3 +1,9 @@
+/*
+17. Practice various front-end tools and report generation. 
+a. Generate a report on the employee table. 
+b. Generate a report on the clients from outside Kerala. 
+*/
+
 SET LINESIZE 100
 SET PAGESIZE 15
 
