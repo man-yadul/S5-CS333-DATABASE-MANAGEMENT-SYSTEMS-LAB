@@ -1,43 +1,61 @@
 /*
-11a. Write a MongoDB query to display all the documents in the collection restaurants. 
-11b. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine for all the documents in the collection restaurant 
-11c. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine, but exclude the field _id for all the documents in the collection restaurant. 
-11d. Write a MongoDB query to display the fields restaurant_id, name, borough and zip code, but exclude the field _id for all the documents in the collection restaurant. 
+1) Create a collection "employees" with the following structure:
+{
+{ emp: "Harry", sal: 20000, address: { street: "asb12", city: "lll", country: "US" }, dept: "A" },
+{ emp: "Tom", sal: 25000, address: { street: "ak112", city: "lll", country: "US" }, dept: "B" },
+{ emp: "Tim", sal: 80000, address: { street: "asb12", city: "kkk", country: "UK" }, dept: "A" },
+{ emp: "Pam", sal: 65000, address: { street: "al12", city: "ooo", country: "SA" }, dept: "C" },
+{ emp: "Mary", sal: 40000, address: { street: "a4512", city: "tttt", country: "SA" }, dept: "A" },
+{ emp: "Lily", sal: 75000, address: { street: "ak11", city: "yyy", country: "UK" }, dept: "C" },
+{ emp: "Sal", sal: 55000, address: { street: "at11", city: "yyl", country: "UK" }, dept: "B" }
+}
+2) Insert a new document in the collection "employees".
+3) Read all documents from the collection.
+4) Read all employees with salary greater than 50,000 and working in department C.
+5) Update the documents of each employee working in department B, by adding a new
+field email:[ "a1@gmail.com", aa1@gmail.com].
+6) Delete the documents of all employees whose salary is less than 30000 and
+department =A or B.
 */
 
-db.createCollection('restaurants')
+-- 1.
+db.createCollection("employees");
 
-db.restaurants.insertOne(
-	{ 
-		"address": { 
-			"building": "1007", 
-			"coord": [ -73.856077, 40.848447 ], 
-			"street": "Morris Park Ave", 
-			"zipcode": "10462" 
-		}, 
-		"borough": "Bronx", 
-		"cuisine": "Bakery", 
-		"grades": [ 
-			{ "date": { "$date": 1393804800000 }, "grade": "A", "score": 2 }, 
-			{ "date": { "$date": 1378857600000 }, "grade": "A", "score": 6 }, 
-			{ "date": { "$date": 1358985600000 }, "grade": "A", "score": 10 }, 
-			{ "date": { "$date": 1322006400000 }, "grade": "A", "score": 9 }, 
-			{ "date": { "$date": 1299715200000 }, "grade": "B", "score": 14 } 
-		], 
-		"name": "Morris Park Bake Shop", 
-		"restaurant_id": "30075445" 
+db.employees.insertMany( [
+	{ emp: "Harry", sal: 20000, address: { street: "asb12", city: "lll", country: "US" }, dept: "A" },
+	{ emp: "Tom", sal: 25000, address: { street: "ak112", city: "lll", country: "US" }, dept: "B" },
+	{ emp: "Tim", sal: 80000, address: { street: "asb12", city: "kkk", country: "UK" }, dept: "A" },
+	{ emp: "Pam", sal: 65000, address: { street: "al12", city: "ooo", country: "SA" }, dept: "C" },
+	{ emp: "Mary", sal: 40000, address: { street: "a4512", city: "tttt", country: "SA" }, dept: "A" },
+	{ emp: "Lily", sal: 75000, address: { street: "ak11", city: "yyy", country: "UK" }, dept: "C" },
+	{ emp: "Sal", sal: 55000, address: { street: "at11", city: "yyl", country: "UK" }, dept: "B" }
+] );
+
+-- 2.
+db.employees.insertOne( { emp: "John", sal: 60000, address: { street: "st11", city: "yoo", country: "US" }, dept: "C" } );
+
+-- 3.
+db.employees.find().pretty();
+
+-- 4.
+db.employees.find( {
+	sal: { $gt: 50000 }, 
+	dept: "C"
+} );
+
+-- 5.
+db.employees.updateMany(
+	{ dept: "B" },
+	{
+	  $set: { email: [ "a1@gmail.com", "aa1@gmail.com" ] }
 	}
-) 
+);
 
--- 11a.
-db.restaurants.find().pretty()
-
--- 11b.
-db.restaurants.find({}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1}).pretty()
-
--- 11c.
-db.restaurants.find({}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0}).pretty()
-
--- 11d.
-db.restaurants.find({}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, "address.zipcode": 1, _id: 0}).pretty()
-db.restaurants.find({}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, address: {zipcode: 1}, _id: 0}).pretty()
+-- 6.
+db.employees.deleteMany( {
+	sal: { $lt: 30000 }, 
+	$or: [
+		{ dept: "A" },
+		{ dept: "B" }
+	]
+} );
