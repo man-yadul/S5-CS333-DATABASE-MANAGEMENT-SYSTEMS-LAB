@@ -183,30 +183,21 @@ a. Generate a report on the employee table. <br/>
 b. Generate a report on the clients from outside Kerala.  <br/>
 
 #### Day 11 
-18. Structure of 'restaurants' collection: <br/>
+1) Create a collection “employees” with the following structure: <br/>
 { <br/>
-"address": { <br/>
-     "building": "1007", <br/>
-     "coord": [ -73.856077, 40.848447 ], <br/>
-     "street": "Morris Park Ave", <br/>
-     "zipcode": "10462" <br/>
-  }, <br/>
-  "borough": "Bronx", <br/>
-  "cuisine": "Bakery", <br/>
-  "grades": [ <br/>
-     { "date": { "$date": 1393804800000 }, "grade": "A", "score": 2 }, <br/>
-     { "date": { "$date": 1378857600000 }, "grade": "A", "score": 6 }, <br/>
-     { "date": { "$date": 1358985600000 }, "grade": "A", "score": 10 }, <br/>
-     { "date": { "$date": 1322006400000 }, "grade": "A", "score": 9 }, <br/>
-     { "date": { "$date": 1299715200000 }, "grade": "B", "score": 14 } <br/>
-  ], <br/>
-  "name": "Morris Park Bake Shop", <br/>
-  "restaurant_id": "30075445" <br/>
+{ emp: "Harry", sal: 20000, address: { street: “asb12”, city: “lll”, country: "US" }, dept: "A" }, <br/>
+{ emp: "Tom", sal: 25000, address: { street: “ak112”, city: “lll”, country: "US" }, dept: "B" }, <br/>
+{ emp: "Tim", sal: 80000, address: { street: “asb12”, city: “kkk”, country: "UK" }, dept: "A" }, <br/>
+{ emp: "Pam", sal: 65000, address: { street: “al12”, city: “ooo”, country: "SA" }, dept: "C" }, <br/>
+{ emp: "Mary", sal: 40000, address: { street: “a4512”, city: “tttt”, country: "SA" }, dept: "A" }, <br/>
+{ emp: "Lily", sal: 75000, address: { street: “ak11”, city: “yyy”, country: "UK" }, dept: "C" }, <br/>
+{ emp: "Sal", sal: 55000, address: { street: “at11”, city: “yyl”, country: "UK" }, dept: "B" } <br/>
 } <br/>
-a. Write a MongoDB query to display all the documents in the collection restaurants. <br/>
-b. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine for all the documents in the collection restaurant <br/>
-c. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine, but exclude the field _id for all the documents in the collection restaurant. <br/>
-d. Write a MongoDB query to display the fields restaurant_id, name, borough and zip code, but exclude the field _id for all the documents in the collection restaurant. <br/>
+2) Insert a new document in the collection “employees”. <br/>
+3) Read all documents from the collection. <br/>
+4) Read all employees with salary greater than 50,000 and working in department C. <br/>
+5) Update the documents of each employee working in department B, by adding a new field email:[ "a1@gmail.com", aa1@gmail.com]. <br/>
+6) Delete the documents of all employees whose salary is less than 30000 and department =A or B. <br/>
 
 #### Day 12 
 19. Mini project (Application Development using Oracle/ MySQL using Database <br/>
