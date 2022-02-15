@@ -1,3 +1,32 @@
+/*
+15. Creation of database Triggers and Cursors * 
+a. Given the tables, 
+MASTER (ACCNO, NAME, OPEN_DATE, BALANCE) 
+TRANSACTION (TACCNO, TAMOUNT, TDATE, OPERATION) 
+i) Create a trigger to check whether withdrawal or deposit is possible or not. 
+Withdrawal is possible only if the minimum balance after withdrawal is 
+greater than or equal to 1000.  
+ii) Record each transaction in TRANSACTION table. Raise a trigger for each 
+entry in the Transaction table. 
+iii) Update the balance in MASTER table accordingly.
+
+b. Consider the following tables (Advanced Question) 
+SUPPLIERS (SuppNo, SName, SAddress, SCity, SState, SPhone, SBalance) 
+ORDERS (OrdNo, OrdDate, OrdSuppNo,OrdPartNo, OrdQty) 
+PARTS (PartNo, PName, Qty, Price) 
+i) Create a trigger to ensure that Supplier ‘S002’ is not to be given orders larger 
+than 100 units of any part. 
+ii) Create a procedure to 
+Ensure that there should not be more than 2 suppliers based inthe same city.  
+Ensure that supplier is having enough balance to place the order. 
+
+c. Create a Cursor which updates the salaries of an Employee as follows. 
+i. If salary < 10000 then update the salary to 15000. 
+ii. If salary >= 10000 and < 30000 then update the salary to 35000. 
+iii. If salary >= 30000 and < 60000 then update the salary to 65000. 
+iv. Count the no: of records that have been updated 
+*/
+
 -- 14a (i), (ii).
 CREATE OR REPLACE PACKAGE PKG
 IS
