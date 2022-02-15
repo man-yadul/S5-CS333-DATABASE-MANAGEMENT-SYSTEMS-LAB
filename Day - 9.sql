@@ -1,4 +1,9 @@
 /*
+14. Creation of Packages * 
+a. Create a package which contains: 
+i. A procedure to hire a new employee. 
+ii. A function to increase the commission of the employee. 
+
 15. Creation of database Triggers and Cursors * 
 a. Given the tables, 
 MASTER (ACCNO, NAME, OPEN_DATE, BALANCE) 
