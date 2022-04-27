@@ -9,7 +9,7 @@ Manager
 7c. Delete from CUST_VW the Employee-Kevin. 
 7d. Delete the view created. 
 8. Implementation of Built in functions in RDBMS 
-8a. Find the value of 165 
+8a. Find the value of 16^5 
 8b. Find the length of the string “Application” 
 8c. What is the last date of the current month? 
 8d. Convert the given number 65432 to $65432. Use format mask. 
