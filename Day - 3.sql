@@ -34,9 +34,19 @@ VALUES ('E0008', 'D006');
 
 -- 4a.
 ALTER TABLE Employee
+ADD CONSTRAINT UNIQUE_JOB
+UNIQUE (Job);
+
+-- Without creating a constraint
+ALTER TABLE Employee
 ADD UNIQUE (Job);
 
 -- 4b.
+ALTER TABLE Employee
+ADD CONSTRAINT CHECK_COMM
+CHECK (Comm > 400);
+
+-- Without creating a constraint
 ALTER TABLE Employee
 ADD CHECK (Comm > 400);
 
@@ -45,6 +55,10 @@ ALTER TABLE Employee
 MODIFY Salary DEFAULT 25000;
 
 -- 4d.
+ALTER TABLE Employee
+DROP CONSTRAINT UNIQUE_JOB;
+
+-- When no constraint is created
 ALTER TABLE Employee
 DROP UNIQUE (Job);
 
