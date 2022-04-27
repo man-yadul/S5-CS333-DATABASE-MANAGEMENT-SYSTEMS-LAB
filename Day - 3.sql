@@ -37,7 +37,7 @@ ALTER TABLE Employee
 ADD CONSTRAINT UNIQUE_JOB
 UNIQUE (Job);
 
--- Without creating a constraint
+-- Without creating a named constraint
 ALTER TABLE Employee
 ADD UNIQUE (Job);
 
@@ -46,7 +46,7 @@ ALTER TABLE Employee
 ADD CONSTRAINT CHECK_COMM
 CHECK (Comm > 400);
 
--- Without creating a constraint
+-- Without creating a named constraint
 ALTER TABLE Employee
 ADD CHECK (Comm > 400);
 
@@ -58,7 +58,7 @@ MODIFY Salary DEFAULT 25000;
 ALTER TABLE Employee
 DROP CONSTRAINT UNIQUE_JOB;
 
--- When no constraint is created
+-- When no named constraint is created
 ALTER TABLE Employee
 DROP UNIQUE (Job);
 
